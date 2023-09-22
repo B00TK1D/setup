@@ -10,7 +10,7 @@
   ```
 * Set up subdomains with SSL:
   1. Set /etc/nginx/sites-enabled/default to:
-    ```
+    ```nginx
     server {
         listen 80;
         server_name subdomain1.domain.com;
