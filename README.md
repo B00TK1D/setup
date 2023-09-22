@@ -9,7 +9,7 @@
   sudo apt update && apt install -y docker docker-compose zip gzip iputils-ping traceroute htop nginx certbot python3-certbot-nginx
   ```
 * Set up subdomains with SSL:
-  1. Set /etc/nginx/sites-enabled/default to:
+  1. Set `/etc/nginx/sites-enabled/default` to:
     ```nginx
     server {
         listen 80;
@@ -31,8 +31,7 @@
     }
     ...
     ```
-  2. Run
-     ```bash
+  2. ```bash
      sudo certbot --nginx -d subdomain1.domain.com -d subdomain2.domain.com && sudo sevice nginx restart
      ```
 
