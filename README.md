@@ -1,7 +1,13 @@
 # Server Setup Quickstart
 
-* Save git credentials: `git config --global credential.helper store`
-* Install generally useful server utils: `sudo apt update && apt install -y docker docker-compose zip gzip iputils-ping traceroute htop nginx certbot python3-certbot-nginx`
+* Save git credentials
+  * ```bash
+    git config --global credential.helper store
+    ```
+* Install generally useful server utils:
+* ```bash
+  sudo apt update && apt install -y docker docker-compose zip gzip iputils-ping traceroute htop nginx certbot python3-certbot-nginx
+  ```
 * Set up subdomains with SSL:
   1. Set /etc/nginx/sites-enabled/default to:
     ```
@@ -25,5 +31,8 @@
     }
     ...
     ```
-  2. Run `sudo certbot --nginx -d subdomain1.domain.com -d subdomain2.domain.com && sudo sevice nginx restart`
+  2. Run
+     ```bash
+     sudo certbot --nginx -d subdomain1.domain.com -d subdomain2.domain.com && sudo sevice nginx restart
+     ```
 
