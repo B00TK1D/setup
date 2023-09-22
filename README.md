@@ -1,4 +1,4 @@
-# Server Setup Guide Quickstart
+# Server Setup Quickstart
 
 * Save git credentials: `git config --global credential.helper store`
 * Install generally useful server utils: `sudo apt update && apt install -y docker docker-compose zip gzip iputils-ping traceroute htop nginx certbot python3-certbot-nginx`
