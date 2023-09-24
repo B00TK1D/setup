@@ -43,3 +43,16 @@
   * ```bash
     openssl rand -hex 16
     ```
+ * Move files around
+   1. Compress files
+   ```bash
+   tar -czvf files.tar.gz /path/src
+   ```
+   2. SCP files between hosts
+   ```bash
+   scp /local/dst user@remote:/src
+   ```
+   3. Decompress files
+   ```bash
+   tar -xvzf files.tar.gz -C /local/dst
+   ```
