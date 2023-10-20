@@ -37,7 +37,7 @@
     ```
   3. ```bash
      sudo certbot --nginx -d subdomain1.domain.com -d subdomain2.domain.com
-     sudo sevice nginx restart
+     sudo service nginx restart
      ```
 * Generate random passwords
   * ```bash
