@@ -18,6 +18,12 @@
     server {
         listen 80;
         server_name subdomain1.domain.com;
+    
+        # Require basic authentication for all requests
+        auth_basic "Restricted Area";
+        auth_basic_user_file /etc/nginx/.htpasswd;
+
+        # Proxy requests
         location / {
             proxy_set_header Host $host;
             proxy_pass http://127.0.0.1:3434;
@@ -27,6 +33,12 @@
     server {
         listen 80;
         server_name subdomain2.domain.com;
+        
+        # Require basic authentication for all requests
+        auth_basic "Restricted Area";
+        auth_basic_user_file /etc/nginx/.htpasswd;
+
+        # Proxy requests
         location / {
             proxy_set_header Host $host;
             proxy_pass http://127.0.0.1:3435;
