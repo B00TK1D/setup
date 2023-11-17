@@ -48,6 +48,7 @@
     ...
     ```
   3. ```bash
+     htpasswd -c /etc/nginx/.htpasswd admin
      sudo certbot --nginx -d subdomain1.domain.com -d subdomain2.domain.com
      sudo service nginx restart
      ```
