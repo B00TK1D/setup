@@ -6,7 +6,7 @@
     ```
 * Install generally useful server utils:
  * ```bash
-   sudo apt update && apt install -y docker docker-compose zip gzip iputils-ping traceroute htop
+   sudo apt update && apt install -y docker docker-compose zip gzip iputils-ping traceroute htop neovim
    ```
 * Set up subdomains with SSL:
   1. Install nginx and certbot
