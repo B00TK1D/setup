@@ -5,9 +5,17 @@
     git config --global credential.helper store
     ```
 * Install generally useful server utils:
- * ```bash
-   sudo apt update && apt install -y docker docker-compose zip gzip iputils-ping traceroute htop neovim
-   ```
+  * ```bash
+    sudo apt update && apt install -y docker docker-compose zip gzip iputils-ping traceroute htop neovim
+    ```
+* Install docker
+  * ```bash
+    curl -fsSL https://get.docker.com | sh
+    ```
+* Install golang
+  * ```bash
+    curl -fsSLo- https://s.id/golang-linux | bash
+    ``` 
 * Set up subdomains with SSL:
   1. Install nginx and certbot
     ```bash
