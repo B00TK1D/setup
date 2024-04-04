@@ -6,7 +6,7 @@
     ```
 * Install generally useful server utils:
   * ```bash
-    sudo apt update && apt install -y docker docker-compose zip gzip iputils-ping traceroute htop neovim
+    sudo apt update && apt install -y zip gzip iputils-ping traceroute htop tmux neovim tcpdump
     ```
 * Install docker
   * ```bash
