@@ -1,12 +1,12 @@
 # Server Setup Quickstart
 
-* Save git credentials
-  * ```bash
-    git config --global credential.helper store
-    ```
 * Install generally useful server utils:
   * ```bash
-    sudo apt update && apt install -y zip gzip iputils-ping traceroute htop tmux neovim tcpdump
+    sudo apt update && apt install -y zip gzip iputils-ping traceroute htop tmux neovim tcpdump gh
+    ```
+* Log into github
+  * ```bash
+    gh auth login
     ```
 * Install docker
   * ```bash
