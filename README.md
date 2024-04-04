@@ -15,6 +15,11 @@
 * Install golang
   * ```bash
     curl -fsSLo- https://s.id/golang-linux | bash
+    ```
+* Install tailscale
+  * ```bash
+    curl -fsSL https://tailscale.com/install.sh | sh
+    tailscale up
     ``` 
 * Set up subdomains with SSL:
   1. Install nginx and certbot
