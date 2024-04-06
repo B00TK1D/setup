@@ -2,7 +2,7 @@
 
 * Install generally useful server utils:
   * ```bash
-    sudo apt update && apt install -y zip gzip iputils-ping traceroute htop tmux neovim tcpdump gh
+    sudo apt update && apt install -y zip gzip iputils-ping traceroute htop tmux neovim tcpdump gh wireguard
     ```
 * Log into github
   * ```bash
