@@ -24,7 +24,7 @@
 * Set up subdomains with SSL:
   1. Install nginx and certbot
     ```bash
-    sudo apt install -y nginx certbot python3-certbot-nginx
+    sudo apt install -y nginx certbot python3-certbot-nginx apache2-utils
     ```
   2. Set `/etc/nginx/sites-enabled/default` to:
     ```nginx
