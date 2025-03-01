@@ -82,3 +82,19 @@
    ```bash
    tar -xvzf files.tar.gz -C /local/dst
    ```
+
+
+* Resize disks live
+  ```bash
+  apt install -y cloud-guest-utils
+  growpart /dev/sda 
+  resize2fs /dev/sda1
+  df -h
+  ```
+
+
+
+
+
+
+
