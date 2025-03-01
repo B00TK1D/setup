@@ -87,7 +87,7 @@
 * Resize disks live
   ```bash
   apt install -y cloud-guest-utils
-  growpart /dev/sda 
+  growpart /dev/sda 1
   resize2fs /dev/sda1
   df -h
   ```
