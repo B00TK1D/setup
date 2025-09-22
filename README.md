@@ -1,5 +1,10 @@
 # Server Setup Quickstart
 
+* Quick setup
+  * ```bash
+      curl -fsSL https://github.com/B00TK1D/setup/main/setup.sh | bash
+    ```
+
 * Install generally useful server utils:
   * ```bash
     sudo apt update && apt upgrade -y && apt install -y zip gzip iputils-ping traceroute htop tmux neovim tcpdump gh wireguard build-essential zip btop
@@ -20,7 +25,7 @@
   * ```bash
     curl -fsSL https://tailscale.com/install.sh | sh
     tailscale up
-    ``` 
+    ```
 * Set up subdomains with SSL:
   1. Install nginx and certbot
     ```bash
@@ -31,7 +36,7 @@
     server {
         listen 80;
         server_name subdomain1.domain.com;
-    
+
         # Require basic authentication for all requests
         auth_basic "Restricted Area";
         auth_basic_user_file /etc/nginx/.htpasswd;
@@ -46,7 +51,7 @@
     server {
         listen 80;
         server_name subdomain2.domain.com;
-        
+
         # Require basic authentication for all requests
         auth_basic "Restricted Area";
         auth_basic_user_file /etc/nginx/.htpasswd;
