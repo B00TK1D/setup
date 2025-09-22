@@ -2,7 +2,7 @@
 
 * Quick setup
   * ```bash
-      curl -fsSL https://github.com/B00TK1D/setup/main/setup.sh | bash
+     curl -fsSL https://raw.githubusercontent.com/B00TK1D/setup/main/setup.sh | bash
     ```
 
 * Install generally useful server utils:
