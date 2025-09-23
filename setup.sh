@@ -2,7 +2,7 @@
 
 sudo apt update
 sudo apt upgrade -y
-sudo apt install -y zip gzip iputils-ping traceroute htop tmux neovim tcpdump gh wireguard build-essential zip btop nginx certbot python3-certbot-nginx apache2-utils pigz jq pv python3-pip
+sudo apt install -y zip gzip iputils-ping traceroute htop tmux neovim tcpdump gh wireguard build-essential zip btop pigz jq pv python3-pip
 
 curl -fsSL https://get.docker.com | sh
 
