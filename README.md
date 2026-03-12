@@ -7,11 +7,7 @@
 
 * Install generally useful server utils:
   * ```bash
-    sudo apt update && apt upgrade -y && apt install -y zip gzip iputils-ping traceroute htop tmux neovim tcpdump gh wireguard build-essential zip btop
-    ```
-* Log into github
-  * ```bash
-    gh auth login
+    sudo apt update && apt upgrade -y && apt install -y zip gzip iputils-ping traceroute htop tmux neovim tcpdump wireguard build-essential zip btop
     ```
 * Install docker
   * ```bash
@@ -20,11 +16,6 @@
 * Install golang
   * ```bash
     curl -fsSLo- https://s.id/golang-linux | bash
-    ```
-* Install tailscale
-  * ```bash
-    curl -fsSL https://tailscale.com/install.sh | sh
-    tailscale up
     ```
 * Set up subdomains with SSL:
   1. Install nginx and certbot
@@ -35,7 +26,7 @@
     ```nginx
     server {
         listen 80;
-        server_name subdomain1.domain.com;
+        server_name domain.com;
 
         # Require basic authentication for all requests
         auth_basic "Restricted Area";
@@ -44,26 +35,13 @@
         # Proxy requests
         location / {
             proxy_set_header Host $host;
-            proxy_pass http://127.0.0.1:3434;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+
+            proxy_pass http://127.0.0.1:8080;
             proxy_redirect off;
         }
     }
-    server {
-        listen 80;
-        server_name subdomain2.domain.com;
-
-        # Require basic authentication for all requests
-        auth_basic "Restricted Area";
-        auth_basic_user_file /etc/nginx/.htpasswd;
-
-        # Proxy requests
-        location / {
-            proxy_set_header Host $host;
-            proxy_pass http://127.0.0.1:3435;
-            proxy_redirect off;
-        }
-    }
-    ...
     ```
   3. ```bash
      htpasswd -c /etc/nginx/.htpasswd admin
